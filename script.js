@@ -1,4 +1,3 @@
-// export {Shape, Rect, Circle, World, Uranium235} from './module.js'
 const canvas = document.getElementById("screen")
 const ctx = canvas.getContext("2d")
 
@@ -53,7 +52,7 @@ class Circle extends Shape{
             return false
         }
     }
-    isCollidedCircle(objectName){ //Rectangle only
+    isCollidedCircle(objectName){
         let distance = Math.sqrt(Math.pow((this.x - objectName.x), 2) + Math.pow((this.y - objectName.y),2))
         if(distance <= this.r + objectName.r){
             return true
